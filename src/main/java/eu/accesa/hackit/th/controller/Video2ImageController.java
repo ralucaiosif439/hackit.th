@@ -1,6 +1,6 @@
 package eu.accesa.hackit.th.controller;
 
-import eu.accesa.hackit.th.Video2ImageService;
+import eu.accesa.hackit.th.service.Video2ImageService;
 import eu.accesa.hackit.th.model.dto.Vid2ImageSplitReqDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
