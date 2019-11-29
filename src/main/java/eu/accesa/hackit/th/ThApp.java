@@ -1,13 +1,15 @@
 package eu.accesa.hackit.th;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ThApplication {
+@EnableAutoConfiguration
+public class ThApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ThApplication.class, args);
+		SpringApplication.run(ThApp.class, args);
 	}
 
 }

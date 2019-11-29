@@ -14,6 +14,13 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	compile group: 'com.google.cloud', name: 'google-cloud-video-intelligence', version: '0.116.0-beta'
+	compile 'org.bytedeco:javacv:1.0'
+	compile 'org.bytedeco:javacpp:1.0'
+	compile 'io.springfox:springfox-swagger2:2.9.2'
+	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
