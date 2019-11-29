@@ -1,7 +1,7 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.1.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.2.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
 }
 
 group = 'eu.accesa.hackit'
@@ -9,11 +9,16 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compile group: 'org.openpnp', name: 'opencv', version: '3.2.0-0'
 
 	compile group: 'com.google.cloud', name: 'google-cloud-video-intelligence', version: '0.116.0-beta'
 	compile 'org.bytedeco:javacv:1.0'
@@ -27,5 +32,5 @@ dependencies {
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
