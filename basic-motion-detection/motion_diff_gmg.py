@@ -35,12 +35,12 @@ while(1):
 
 	fgMaskGmg = subtractorGmg.apply(frame)
 	# cv2.imshow('GMG', fgMaskGmg)
-
 	fgmaskMorphology = cv2.morphologyEx(fgMaskGmg, cv2.MORPH_OPEN, kernel)
 	cv2.imshow('GMG Morph', fgmaskMorphology)
 
-	fgMaskGsoc = subtractorGsoc.apply(frame)
-	cv2.imshow('GSOC', fgMaskGsoc)
+	# fgMaskGsoc = subtractorGsoc.apply(frame)
+	# subtractorGsoc.thresh
+	# cv2.imshow('GSOC', fgMaskGsoc)
 
 	k = cv2.waitKey(30) & 0xff
 	if k == 27:
